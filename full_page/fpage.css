@@ -21,7 +21,7 @@
 }
 
 body {
-    background-color: var(--color-light-100);
+    background-image: var(--color-light-100);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -72,7 +72,7 @@ body {
 
 .dark#container {
     color: var(--color-light-50);
-    background-color: var(--color-dark-100);
+    background-color: var(--color-dark-900);
     animation: light-to-dark-background 0.3s ease-in-out;
 }
 
@@ -89,7 +89,7 @@ body {
 
 @keyframes dark-to-light-background {
     0% {
-        background-color:var(--color-dark-100);
+        background-color:var(--color-dark-900);
     }
     100.0% {
         background-color:var(--color-light-50);
@@ -101,6 +101,6 @@ body {
         background-color:var(--color-light-50);
     }
     100.0% {
-        background-color:var(--color-dark-100); 
+        background-color:var(--color-dark-900); 
     }
 }
