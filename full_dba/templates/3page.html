@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='/3page.css') }}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+    <title>Criar conta</title>
+</head>
+<body>
+
+<main id="container">
+    <form id="login_form" method="POST">
+
+        <div id="form_header">
+            <h1>Crie sua conta</h1>
+        </div>
+
+
+        <div class="input-box">
+            <label>Nome completo</label>
+            <div class="input-field">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" name="nome" required>
+            </div>
+        </div>
+
+        <div class="input-box">
+            <label>Senha</label>
+            <div class="input-field">
+                <i class="fa-solid fa-key"></i>
+                <input type="password"
+                       name="senha"
+                       required
+                       pattern="^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#._-])[A-Za-z\d@$!%*?&#._-]{8,}$">
+            </div>
+
+      <div id="new_password">
+                        <a href="#">
+                            <i class="fa-solid fa-circle-info"></i> A senha deve conter no mínimo 8 caracteres, <p>1 caractere especial, 1 letra maiúscula e 1 número.</p>
+                        </a>
+                    </div>
+                </div>
+
+
+        </div>
+            <button type="submit" id="login_button">
+                Login
+            </button>
+
+  
+
+
+        </form>
+    </main>
+
+
+
+
+
+</body>
+</html>

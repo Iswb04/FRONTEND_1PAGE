@@ -5,7 +5,8 @@
    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="./fpage.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/fpage.css') }}">
+
     <title>Full Page</title>
 </head>
 <body>
@@ -19,11 +20,13 @@
 
     <div class="duck-image">
         <a href="#">
-            <img src="images/duck_image.png" alt="Duck image">
+            <img src="{{ url_for('static', filename='images/duck_image.png') }}">
+
         </a>
     </div>
 
-         <script type="text/javascript" src="./fpage.js"></script>
+         <script src="{{ url_for('static', filename='fpage.js') }}"></script>
+
             
     
     </body>

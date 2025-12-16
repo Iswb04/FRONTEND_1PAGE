@@ -6,13 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
-    <link rel="stylesheet" href="./1page.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/1page.css') }}">
+
     
     <title>Login Page</title>
 </head>
 <body>   
     <main id="container">
-        <form id="login_form">
+        <form id="login_form" method="POST">
            
             <div id="form_header">
                 <h1>Login</h1>
@@ -22,15 +23,13 @@
             <div id="inputs">
         
 
-                <div class="input-box">
-                    <label for="email">
-                        E-mail
-                        <div class="input-field">
-                            <i class="fa-solid fa-envelope"></i>
-                            <input type="email" id="email" name="email">
-                        </div>
-                    </label>
-                </div>
+                   <div class="input-box">
+            <label>E-mail</label>
+            <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" name="email" required>
+            </div>
+        </div>
                 
         
             </div>
@@ -46,11 +45,13 @@
 
     <div class="social-buttons">
         <a href="#">
-            <img src="images/logo_linkedin.png" alt="LinkedIn logo">
+            <img src="{{ url_for('static', filename='images/logo_linkedin.png') }}">
+
         </a>
 
         <a href="#">
-            <img src="images/google_logo.png" alt="Google logo">
+            <img src="{{ url_for('static', filename='images/google_logo.png') }}">
+
         </a>
     </div>
 </div>
