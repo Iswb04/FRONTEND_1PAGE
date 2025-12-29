@@ -56,7 +56,7 @@ def page_into2():
             session["email"] = email
             return redirect("/full")
 
-        # ❌ erro → mesma página
+        # erro → mesma página
         return render_template("2page.html", email=email, erro=True), 401
 
     return render_template("2page.html", email=email)
@@ -113,3 +113,4 @@ if __name__ == "__main__":
 
 
 # http://127.0.0.1:5000/
+# py -m pip install flask
